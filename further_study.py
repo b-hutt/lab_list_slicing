@@ -16,7 +16,14 @@ def custom_len(input_list):
 
     """
 
-    return 0
+    length_of_list = 0
+
+    for i in length_of_list:
+        length_of_list += 1
+
+    return length_of_list
+
+print (custom_len(['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']))
 
 
 # For the next four exercises, you'll need to be clever and think about ways
@@ -43,8 +50,14 @@ def custom_append(input_list, value):
         True
 
     """
+    list_length = custom_len(input_list)
+    input_list [list_length:list_length] = [value]
 
     pass
+
+notes = ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do']
+custom_append(notes, 'Re')
+notes == ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do', 'Re']
 
 
 def custom_extend(input_list, second_list):
@@ -62,8 +75,17 @@ def custom_extend(input_list, second_list):
         True
 
     """
+    for month in second_list:
+        input_list [ :-1] += month
 
-    pass
+
+
+    return input_list
+
+
+months = ['Jan', 'Feb', 'Mar']
+custom_extend_months = ['Apr', 'May']
+custom_extend (months, custom_extend_months)
 
 
 def custom_insert(input_list, index, value):
